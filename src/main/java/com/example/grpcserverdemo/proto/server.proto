@@ -1,0 +1,19 @@
+syntax = "proto3";
+option java_package = "com.example.grpcserverdemo.stubs";
+option java_multiple_files = true;
+
+package com.example.grpc.server;
+
+service YourService {
+  rpc YourMethod(YourRequest) returns (YourResponse);
+}
+
+message YourRequest {
+  string message = 1;
+  string name = 2;
+}
+
+message YourResponse {
+  string responseMessage = 1;
+
+}
